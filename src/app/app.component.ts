@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { PostService } from './post.service';
 
 
 @Component({
@@ -9,9 +10,20 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'social-media-app';
-}
+  firstName = 'daniel';
+  lastName = 'vretoski';
 
-function Feed(){
+  posts: any[] = [];
+
+
+  constructor(private postService: PostService) {
+}
+  
+
+
+  postMessage(form: NgForm): void {
+    
+  }
 
 
 }

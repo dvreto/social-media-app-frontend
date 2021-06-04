@@ -13,16 +13,22 @@
 <div class="messageSender">
   <div class="messageSender__top">
     <img src="../assets/pics/unnamed.png" alt="">
-    <form>
+    <form 
+    #form="ngForm" 
+    name= "message" 
+    (ngSubmit)="postMessage(form)"
+    ngModel placeholder="What would you like to post"
+    novalidate>
 
       <input type="text" placeholder="what do you want to write">
 
-      <button onclick={handleSubmit} type = "submit">
-        submit
+      <button type = "submit"> submit
       </button>
 
       
     </form>
+
+
   </div>
 
 
