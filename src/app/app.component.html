@@ -17,26 +17,26 @@
     #form="ngForm" 
     name= "message" 
     (ngSubmit)="postMessage(form)"
-    ngModel placeholder="What would you like to post"
+    placeholder="What would you like to post"
     novalidate>
 
-      <input type="text" placeholder="what do you want to write">
+      <input type="text" ngModel name="description" placeholder="what do you want to write">
 
-      <button type = "submit"> submit
+      <button  type = "submit" class = "btn btn-success"> submit
       </button>
 
-      
     </form>
-
-
   </div>
+</div>
 
+<div *ngFor = 'let post of posts'>
+  <div class="messageSender row col-xs-12">{{post.description}}<div>
 
 </div>
 
 
-
 </div>
+
 
 
 
