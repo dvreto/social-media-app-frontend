@@ -12,7 +12,7 @@
 
 <div class="messageSender">
   <div class="messageSender__top">
-    <img src="../assets/pics/unnamed.png" alt="">
+    <img src={{avatar}} alt="">
     <form 
     #form="ngForm" 
     name= "message" 
@@ -21,6 +21,7 @@
     novalidate>
 
       <input type="text" ngModel name="description" placeholder="what do you want to write">
+      <p *ngIf="ParagraphChecker">you cant submit empty text</p>
 
       <button  type = "submit" class = "btn btn-success"> submit
       </button>
@@ -29,8 +30,11 @@
   </div>
 </div>
 
-<div *ngFor = 'let post of posts'>
-  <div class="messageSender row col-xs-12">{{post.description}}<div>
+<div *ngFor = 'let post of posts' class="messageSender">
+  <div class="messageSender__top"><img src={{avatar}} alt="">{{post.description}}
+    <div class = "MyInfo">{{this.firstName}} {{this.lastName}}</div>
+  </div>
+    
 
 </div>
 
