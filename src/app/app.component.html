@@ -30,9 +30,13 @@
   </div>
 </div>
 
-<div *ngFor = 'let post of posts' class="messageSender">
+<div *ngFor = 'let post of posts; let i = index' class="messageSender">
   <div class="messageSender__top"><img src={{avatar}} alt="">{{post.description}}
-    <div class = "MyInfo">{{this.firstName}} {{this.lastName}}</div>
+    <div class = "MyInfo">{{this.firstName}} {{this.lastName}}
+      <button (click)="OnDelete(i)" class="btn btn-danger">Delete</button>
+      <button (click)="OnUpdate(i)" class="btn btn-primary">Edit</button>
+      
+    </div>
   </div>
     
 

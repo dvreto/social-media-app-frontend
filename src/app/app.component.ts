@@ -33,5 +33,16 @@ export class AppComponent {
       this.ParagraphChecker = true;
     }
   }
+
+  OnDelete(id: number){
+    
+    this.posts.splice(id,1);
+
 }
 
+OnUpdate(id: number){
+  
+
+}
+
+}
